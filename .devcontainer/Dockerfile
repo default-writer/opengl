@@ -37,7 +37,7 @@ ARG COMMON_SCRIPT_SHA="dev-mode"
 ###
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends build-essential tar curl zip unzip g++
+    && apt-get -y install --no-install-recommends build-essential tar curl zip unzip g++ gcc
 
 ENV TZ=Europe/Moscow
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
